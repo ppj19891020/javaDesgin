@@ -28,11 +28,17 @@ import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
- * @author bowen
- * @date 2015年8月29日 上午9:46:31 
+ * 大文件execl导出
+ * @author pangpeijie
  */
 public class LargeExcelUtil {
 	
+	/**
+	 * 日期格式转换
+	 * @param obj
+	 * @param pattern
+	 * @return
+	 */
 	private static String transObj(Object obj, String pattern) {
 		if (pattern == null || "".equals(pattern)) {
 			pattern = "yyyy-MM-dd";
@@ -56,6 +62,14 @@ public class LargeExcelUtil {
 		return textValue;
 	}
 	
+	/**
+	 * 导出execl
+	 * @param path 文件路径
+	 * @param headers 标题
+	 * @param columnName 列名
+	 * @param collections 数据集合
+	 * @param count 次数
+	 */
 	public static void writeList(String path,String[] headers, String[] columnName,List<Map<String, Object>> collections,int count) {
 		File file = new File(path);
 		HSSFWorkbook book = null;
@@ -108,6 +122,7 @@ public class LargeExcelUtil {
 			}
 			book.write(out);
 			out.close();
+			System.out.println("生成文件：" + path);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

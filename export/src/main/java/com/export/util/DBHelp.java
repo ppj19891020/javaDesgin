@@ -9,7 +9,8 @@ public class DBHelp {
     public void connect(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://192.168.1.236:3306/test","root","root");
+            conn = DriverManager.getConnection("jdbc:mysql://rdss48ik5jz4qqhhfm6s9public.mysql.rds.aliyuncs.com:3306/db_gd?useUnicode=true&characterEncoding=UTF-8",
+            		"db_mamahao_root","db_mamahao_pwd_123987");
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -41,7 +42,7 @@ public class DBHelp {
     //增删修改
     public int addU(String sql, String str[]){
         int a =0;
-        connect();
+        /*connect();
         try {
             PreparedStatement pst = conn.prepareStatement(sql);
             if(str != null){
@@ -54,7 +55,7 @@ public class DBHelp {
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
+        }*/
         return a;
     }
 	
