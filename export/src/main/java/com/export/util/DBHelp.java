@@ -9,7 +9,7 @@ public class DBHelp {
     public void connect(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://rdss48ik5jz4qqhhfm6s9public.mysql.rds.aliyuncs.com:3306/db_gd?useUnicode=true&characterEncoding=UTF-8",
+            conn = DriverManager.getConnection("jdbc:mysql://121.43.116.136:3306/db_gd?useUnicode=true&characterEncoding=UTF-8",
             		"db_mamahao_root","db_mamahao_pwd_123987");
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block

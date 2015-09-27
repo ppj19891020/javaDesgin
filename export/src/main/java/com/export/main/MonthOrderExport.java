@@ -23,7 +23,7 @@ public class MonthOrderExport {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         try {
-        	String month = "2015-08";//月份
+        	String month = "2015-09";//月份
         	Map<Integer,String> companys = new HashMap<Integer, String>();//分公司报表数据导出
         	companys.put(31, "杭州分工司");
         	companys.put(22, "成都分公司");

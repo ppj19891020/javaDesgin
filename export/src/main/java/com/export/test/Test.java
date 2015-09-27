@@ -1,10 +1,14 @@
 package com.export.test;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import com.export.util.CSVUtils;
 
 public class Test {
 
@@ -13,7 +17,7 @@ public class Test {
 		Calendar calendar = Calendar.getInstance();  
         
         /* HOUR_OF_DAY 指示一天中的小时 */  
-        calendar.set(Calendar.MINUTE, calendar.get(Calendar.MINUTE) + 45);  
+        /*calendar.set(Calendar.MINUTE, calendar.get(Calendar.MINUTE) + 45);  
           
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
           
@@ -27,7 +31,15 @@ public class Test {
             System.out.println("true");
         }else {
             System.out.println("false");
-        }
+        }*/
+		
+		
+		/*List<String> dataList=new ArrayList<String>();
+        dataList.add("1,张三,男");
+        dataList.add("2,李四,男");
+        dataList.add("3,小红,女");
+        boolean isSuccess=CSVUtils.exportCsv(new File("C:/ljq.csv"), dataList);
+        System.out.println(isSuccess);*/
         
 	}
 

@@ -30,5 +30,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.25</version>
 		</dependency>
+		<dependency>
+		  <groupId>net.sf.opencsv</groupId>
+		  <artifactId>opencsv</artifactId>
+		  <version>2.3</version>
+		  <type>pom</type>
+		</dependency>
   </dependencies>
 </project>
